@@ -34,6 +34,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(title: Text("Home Page")),
       body: Column(
+        mainAxisAlignment: .center,
         children: [
           Expanded(
             child: FutureBuilder(
@@ -47,7 +48,8 @@ class _HomePageState extends State<HomePage> {
                     itemBuilder: (context, index) {
                       return Card(
                         child: Container(
-                          margin: EdgeInsets.all(10),
+                          margin: EdgeInsets.all(5),
+                          padding: EdgeInsets.all(5),
                           child: ListTile(
                             leading: Text(
                               getPostsList[index].id.toString(),
@@ -63,7 +65,20 @@ class _HomePageState extends State<HomePage> {
                                 fontWeight: FontWeight.normal,
                               ),
                             ),
-                            subtitle: Text(getPostsList[index].body.toString()),
+                            subtitle: Column(
+                              children: [
+                                Text(getPostsList[index].body.toString()),
+                                Row(
+                                  mainAxisAlignment: .end,
+                                  children: [
+                                    Text(
+                                      index.toString(),
+                                      style: TextStyle(fontSize: 12),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
                             trailing: Text(
                               getPostsList[index].userId.toString(),
                             ),

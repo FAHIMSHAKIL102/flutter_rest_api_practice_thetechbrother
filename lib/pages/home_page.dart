@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_rest_api_practice_thetechbrother/models/posts_model.dart';
+import 'package:flutter_rest_api_practice_thetechbrother/pages/second_page.dart';
 import 'package:http/http.dart' as http;
 
 class HomePage extends StatefulWidget {
@@ -33,6 +34,25 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Home Page")),
+      drawer: Drawer(
+        child: Column(
+          crossAxisAlignment: .center,
+          children: [
+            DrawerHeader(child: SizedBox()),
+            ListTile(
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SecondPage()),
+                );
+              },
+              title: Text('P H O T O', style: TextStyle(fontSize: 18)),
+              trailing: Icon(Icons.photo),
+            ),
+          ],
+        ),
+      ),
       body: Column(
         mainAxisAlignment: .center,
         children: [
@@ -61,8 +81,8 @@ class _HomePageState extends State<HomePage> {
                             title: Text(
                               getPostsList[index].title.toString(),
                               style: TextStyle(
-                                fontSize: 25,
-                                fontWeight: FontWeight.normal,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                             subtitle: Column(

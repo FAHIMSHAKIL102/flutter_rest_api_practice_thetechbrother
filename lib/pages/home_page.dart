@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
                 );
               },
               title: Text('P H O T O', style: TextStyle(fontSize: 18)),
-              trailing: Icon(Icons.photo),
+              trailing: Icon(Icons.photo_outlined),
             ),
           ],
         ),

@@ -65,7 +65,7 @@ class _SecondPageState extends State<SecondPage> {
                         child: ListTile(
                           leading: ClipOval(
                             child: Image.network(
-                              items[index].url,
+                              items[index].url.toString(),
                               width: 48,
                               height: 48,
                               fit: BoxFit.cover,
@@ -75,7 +75,7 @@ class _SecondPageState extends State<SecondPage> {
                             ),
                           ),
                           title: Text(
-                            items[index].title,
+                            items[index].title.toString(),
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           subtitle: SizedBox(
@@ -92,10 +92,13 @@ class _SecondPageState extends State<SecondPage> {
                             height: 50,
                             width: 50,
                             child: Image.network(
-                              items[index].thumbnailUrl,
+                              items[index].thumbnailUrl.toString(),
                               fit: BoxFit.cover,
                               errorBuilder: (context, error, stackTrace) {
-                                return const Icon(Icons.image_not_supported, size: 40);
+                                return const Icon(
+                                  Icons.image_not_supported,
+                                  size: 40,
+                                );
                               },
                             ),
                           ),
@@ -114,11 +117,11 @@ class _SecondPageState extends State<SecondPage> {
 }
 
 class PhotosModel {
-  String title;
-  String url;
-  String thumbnailUrl;
-  int id;
-  int albumId;
+  String? title;
+  String? url;
+  String? thumbnailUrl;
+  int? id;
+  int? albumId;
 
   PhotosModel({
     required this.title,

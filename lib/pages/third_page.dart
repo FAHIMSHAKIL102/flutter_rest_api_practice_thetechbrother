@@ -44,14 +44,14 @@ class _ThirdPageState extends State<ThirdPage> {
                   return Text('No User Data');
                 } else {
                   return ListView.builder(
-                    padding: EdgeInsets.all(5),
                     itemCount: snapshot.data!.length,
                     itemBuilder: (context, index) {
                       return Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Container( decoration: BoxDecoration(
-                                border: Border.all(color: Colors.red),
-                              ),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.red),
+                          ),
                           child: Column(
                             children: [
                               UserInfo(
@@ -59,10 +59,12 @@ class _ThirdPageState extends State<ThirdPage> {
                                 value: snapshot.data![index].email.toString(),
                                 address: snapshot.data![index].address!.city
                                     .toString(),
-                                useName: snapshot.data![index].username.toString(),
+                                useName: snapshot.data![index].username
+                                    .toString(),
                               ),
                               UserInfo(
-                                title: snapshot.data![index].username.toString(),
+                                title: snapshot.data![index].username
+                                    .toString(),
                                 value: snapshot.data![index].address!.geo!.lat
                                     .toString(),
                                 address: snapshot.data![index].address!.street

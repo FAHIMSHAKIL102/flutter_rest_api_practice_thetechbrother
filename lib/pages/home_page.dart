@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_rest_api_practice_thetechbrother/models/posts_model.dart';
+import 'package:flutter_rest_api_practice_thetechbrother/pages/fourth_page.dart';
 import 'package:flutter_rest_api_practice_thetechbrother/pages/second_page.dart';
 import 'package:flutter_rest_api_practice_thetechbrother/pages/third_page.dart';
 import 'package:http/http.dart' as http;
@@ -42,7 +43,6 @@ class _HomePageState extends State<HomePage> {
             DrawerHeader(child: SizedBox()),
             ListTile(
               onTap: () {
-                Navigator.pop(context);
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => SecondPage()),
@@ -60,6 +60,17 @@ class _HomePageState extends State<HomePage> {
                 );
               },
               title: Text('U S E R', style: TextStyle(fontSize: 18)),
+              trailing: Icon(Icons.person_2_outlined),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FourthPage()),
+                );
+              },
+              title: Text('U S E R T W O', style: TextStyle(fontSize: 18)),
               trailing: Icon(Icons.person_2_outlined),
             ),
           ],

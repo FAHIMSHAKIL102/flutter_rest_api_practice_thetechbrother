@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_rest_api_practice_thetechbrother/models/posts_model.dart';
-import 'package:flutter_rest_api_practice_thetechbrother/pages/fourth_page.dart';
-import 'package:flutter_rest_api_practice_thetechbrother/pages/second_page.dart';
-import 'package:flutter_rest_api_practice_thetechbrother/pages/third_page.dart';
+import 'package:flutter_rest_api_practice_thetechbrother/pages/get_api/fourth_page.dart';
+import 'package:flutter_rest_api_practice_thetechbrother/pages/get_api/second_page.dart';
+import 'package:flutter_rest_api_practice_thetechbrother/pages/get_api/third_page.dart';
 import 'package:http/http.dart' as http;
 
 class HomePage extends StatefulWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rest_api_practice_thetechbrother/home_page.dart';
+import 'package:flutter_rest_api_practice_thetechbrother/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());

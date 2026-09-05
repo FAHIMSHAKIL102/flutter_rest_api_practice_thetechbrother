@@ -5,6 +5,7 @@ import 'package:flutter_rest_api_practice_thetechbrother/models/posts_model.dart
 import 'package:flutter_rest_api_practice_thetechbrother/pages/get_api/fourth_page.dart';
 import 'package:flutter_rest_api_practice_thetechbrother/pages/get_api/second_page.dart';
 import 'package:flutter_rest_api_practice_thetechbrother/pages/get_api/third_page.dart';
+import 'package:flutter_rest_api_practice_thetechbrother/pages/signup_page.dart';
 import 'package:http/http.dart' as http;
 
 class HomePage extends StatefulWidget {
@@ -72,6 +73,17 @@ class _HomePageState extends State<HomePage> {
               },
               title: Text('U S E R T W O', style: TextStyle(fontSize: 18)),
               trailing: Icon(Icons.person_2_outlined),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignupPage()),
+                );
+              },
+              title: Text('S I G N U P', style: TextStyle(fontSize: 18)),
+              trailing: Icon(Icons.person_add_alt),
             ),
           ],
         ),

@@ -6,6 +6,7 @@ import 'package:flutter_rest_api_practice_thetechbrother/pages/get_api/fourth_pa
 import 'package:flutter_rest_api_practice_thetechbrother/pages/get_api/second_page.dart';
 import 'package:flutter_rest_api_practice_thetechbrother/pages/get_api/third_page.dart';
 import 'package:flutter_rest_api_practice_thetechbrother/pages/signup_page.dart';
+import 'package:flutter_rest_api_practice_thetechbrother/pages/upload_images_page.dart';
 import 'package:http/http.dart' as http;
 
 class HomePage extends StatefulWidget {
@@ -84,6 +85,17 @@ class _HomePageState extends State<HomePage> {
               },
               title: Text('S I G N U P', style: TextStyle(fontSize: 18)),
               trailing: Icon(Icons.person_add_alt),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => UploadImagesPage()),
+                );
+              },
+              title: Text('U P L O A D', style: TextStyle(fontSize: 18)),
+              trailing: Icon(Icons.upload_file_outlined),
             ),
           ],
         ),
